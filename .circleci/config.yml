@@ -10,5 +10,5 @@ jobs:
           command: |
             java -version
       - run:
-        name: "Check Lein version"
-        command: command -v lein
+          name: "Check Lein version"
+          command: command -v lein

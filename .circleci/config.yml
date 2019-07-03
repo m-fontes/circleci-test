@@ -11,4 +11,4 @@ jobs:
             java -version
       - run:
           name: "Check Lein version"
-          command: command -v lein
+          command: command -v lein && lein --version

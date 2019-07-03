@@ -12,4 +12,9 @@ workflows:
   MeuWorkflow:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/testing
+      build:
+        docker:
+          - image: circleci/clojure: openjdk-8-lein
+        steps:
+          - checkout
+          

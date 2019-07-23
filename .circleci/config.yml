@@ -18,3 +18,9 @@ jobs:
           name: "Check NPM version"
           command: |
             npm --version
+
+workflows:
+  test:
+    jobs:
+      - check-yarn-version
+      - check-npm-version

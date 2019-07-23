@@ -8,5 +8,4 @@ workflows:
     jobs:
       - print_version: # a sample job that would be defined above.
           steps:
-            - run: |
-              npm --version
+            - run: "npm --version"

@@ -3,9 +3,8 @@ version: 2.1
 orbs:
   rn: react-native-community/react-native@1.2.1
 
-workflows:
-  test-rn-orb:
-    jobs:
-      - print_version: # a sample job that would be defined above.
-          steps:
-            - run: "npm --version"
+jobs:
+  executor: rn/linux_js
+  rn-test:
+    steps:
+      - run: npm --version

@@ -1,10 +1,13 @@
-version: 2.1
+version: 2.0
 
 orbs:
   rn: react-native-community/react-native@1.2.1
 
 jobs:
-  executor: rn/linux_js
-  rn-test:
+  testjob:
+    executor: rn/linux_js
     steps:
-      - run: npm --version
+      - run:
+          name: "Check NPM version"
+          command: |
+            npm --version; yarn --version

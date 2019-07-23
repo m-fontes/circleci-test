@@ -1,14 +1,12 @@
-version: 2.0
-jobs:
-  build:
-    docker:
-      - image: circleci/clojure:lein-2.9.0
-    steps:
-      - checkout
-      - run:
-          name: "Check Java version"
-          command: |
-            java -version
-      - run:
-          name: "Check Lein version"
-          command: command -v lein && lein --version
+version: 2.1
+
+orbs:
+  rn: react-native-community/react-native@1.2.1
+
+workflows:
+  test-rn-orb:
+    jobs:
+      - print_version: # a sample job that would be defined above.
+          steps:
+            - run: |
+              npm --version

@@ -1,13 +1,20 @@
-version: 2.1  ## we need version >= 2.1 to use orbs!
+version: 2.1
 
 orbs:
-  rn: react-native-community/react-native@1.2.1  ## 3rd party, insecure orb
+  rn: react-native-community/react-native@1.2.1
 
 jobs:
-  build:
+  check-yarn-version:
+    executor: rn/linux_js
+    steps:
+      - run:
+          name: "Check YARN version"
+          command: |
+            yarn --version
+  check-npm-version:
     executor: rn/linux_js
     steps:
       - run:
           name: "Check NPM version"
           command: |
-            npm --version; yarn --version
+            npm --version

@@ -1,7 +1,7 @@
 version: 2.1  ## we need version >= 2.1 to use orbs!
 
 orbs:
-  rn: react-native-community/react-native@1.2.1
+  rn: react-native-community/react-native@1.2.1  ## 3rd party, insecure orb
 
 jobs:
   build:
